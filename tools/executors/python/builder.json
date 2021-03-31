@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/@angular-devkit/architect/src/builders-schema.json",
+  "builders": {
+    "build": {
+      "implementation": "./src/build/builder",
+      "schema": "./src/build/schema.json",
+      "description": "build builder"
+    },
+    "poetry": {
+      "implementation": "./src/poetry/builder",
+      "schema": "./src/poetry/schema.json",
+      "description": "run poetry"
+    }
+  }
+}
