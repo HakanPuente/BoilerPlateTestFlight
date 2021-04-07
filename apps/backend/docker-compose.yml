@@ -1,0 +1,11 @@
+version: '3'
+services:
+    db:
+        image: postgres:latest
+        restart: always
+        environment:
+            POSTGRES_DB: test_flight_postgres
+            POSTGRES_USER: test_pilot
+            POSTGRES_PASSWORD: puente123
+        ports:
+            - 5434:5432

@@ -1,0 +1,12 @@
+<form method="get">
+    <input id="q" name="q" type="text" placeholder="ara...">
+</form>
+
+{% for item in mymodels %}
+    ID : {{ item.id }}<br>
+    ISIM : {{ item.name }}<br>
+    ULKE : {{ item.country }}<br>
+    URUN KODU : {{ item.productID }}<br>
+    YIL : {{ item.year }}<br>
+    <br><br><br><br>
+{% endfor %}
