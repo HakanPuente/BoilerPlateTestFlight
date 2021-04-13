@@ -1,7 +1,16 @@
 from django.db import models
 
+class NumberModel(models.Model):
+    name = models.CharField(max_length=20)
+    num_orders = models.PositiveSmallIntegerField(default=0)
+    num_stocs = models.PositiveSmallIntegerField(default=0)
+
+    def __str__(self):
+        return self.name
+    
+
 class MyModel(models.Model):
-    name = models.CharField(max_length=10)
+    name = models.CharField(max_length=20)
     
     COUNTRY_CHOICES = [
     ('Europe', (
@@ -36,5 +45,8 @@ class MyModel(models.Model):
     )
     
     year = models.CharField(max_length=20, choices=YEAR_CHOICES, default='2020')
+    
     def __str__(self):
         return self.name
+
+    

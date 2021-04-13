@@ -41,14 +41,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_crontab',
     'djangodemo.djangoApp',
-    # 'django_elasticsearch_dsl',
+    'djangodemo.users',
+    'django_elasticsearch_dsl',
 ]
 
-# ELASTICSEARCH_DSL={
-#     'default': {
-#         'hosts': 'localhost:9200'
-#     },
-# }
+AUTH_USER_MODEL = 'users.MyUser'
+
+ELASTICSEARCH_DSL={
+    'default': {
+        'hosts': 'localhost:9200'
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
